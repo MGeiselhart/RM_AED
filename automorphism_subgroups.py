@@ -24,6 +24,9 @@ def get_invertible_matrix(m):
 def bin_matrix_to_longs(A):
     _, N = A.shape
     return np.sum(2**np.arange(N)*A, axis=1)
+    
+def perm_matrix(p):
+    return np.eye(len(p), dtype=np.uint8)[p]
 
 def random_LTA(m):
     b = np.random.randint(0,2,m)
